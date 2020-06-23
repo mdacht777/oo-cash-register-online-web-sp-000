@@ -3,7 +3,6 @@ class CashRegister
   ITEMS=[]
   @previous_total=0
   def initialize(disc=0)
-    self.ITEMS=[]
     @total=0
     @discount=disc
   end
