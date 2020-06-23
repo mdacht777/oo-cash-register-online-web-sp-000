@@ -1,6 +1,6 @@
 class CashRegister
   attr_accessor :total, :discount, :items
-  @items=[]
+  ITEMS=[]
   @previous_total=0
   def initialize(disc=0)
     @total=0
@@ -12,6 +12,7 @@ class CashRegister
   def add_item(title,price,quantity=1)
     @previous_total=@total
     @total+=(price*quantity)
+    ITEMS << title
   end
   def apply_discount
     if @discount>0
@@ -22,7 +23,7 @@ class CashRegister
     end
   end
   def items
-    @items
+    ITEMS
   end
   def void_last_transaction
     @total=@previous_total
