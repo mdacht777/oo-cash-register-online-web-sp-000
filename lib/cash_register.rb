@@ -16,7 +16,7 @@ class CashRegister
       @total+=price
     end 
   end
-  df appt
+  def appt
     if @discount>0
       @total=@total-(@discount*@total)/100
       "After the discount, the total comes to $#{total}."
